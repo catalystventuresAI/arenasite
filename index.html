@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  html,body{margin:0;background:#1A1F21}
+  a{color:#EDE9E1;text-decoration:none}
+  a:hover{color:#D9714F}
+  :focus-visible{outline:2px solid #EDE9E1;outline-offset:2px}
+</style>
+</helmet>
+<div data-screen-label="Homepage" style="position:relative;background:#1A1F21;color:#EDE9E1;font-family:'IBM Plex Sans',system-ui,sans-serif;overflow:hidden;--pl:clamp(24px,5.5vw,88px);--sr:clamp(16px,10.5vw,168px);--pr:calc(var(--sr) + clamp(16px,4.5vw,64px))">
+
+  <sc-if value="{{ spineClay }}" hint-placeholder-val="{{ true }}"><div style="position:absolute;top:0;bottom:0;right:var(--sr);width:3px;background:#C4593A;z-index:1;pointer-events:none"></div></sc-if>
+  <sc-if value="{{ spineBone }}" hint-placeholder-val="{{ false }}"><div style="position:absolute;top:0;bottom:0;right:var(--sr);width:3px;background:#EDE9E1;z-index:1;pointer-events:none"></div></sc-if>
+
+  <header style="position:relative;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px 32px;padding:20px var(--pr) 20px var(--pl);border-bottom:1px solid #353C3E">
+    <a href="#top" style="font-size:16px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#D9714F">Arena Partners</a>
+    <nav style="display:flex;flex-wrap:wrap;align-items:center;gap:8px clamp(24px,4vw,64px);font-size:16px;font-weight:500">
+      <a href="#why" style="color:#EDE9E1">About us</a>
+      <a href="#how" style="color:#EDE9E1">How we work</a>
+      <a href="#blog" style="color:#EDE9E1">Blog</a>
+      <a href="#letter" style="color:#EDE9E1">Letter to investors</a>
+      <a href="#contact" style="border:1px solid #EDE9E1;color:#EDE9E1;padding:10px 22px;min-height:44px;box-sizing:border-box;display:flex;align-items:center" style-hover="border-color:#D9714F;color:#D9714F">Contact</a>
+    </nav>
+  </header>
+
+  <section id="top" data-screen-label="Hero" style="position:relative;padding:72px 0 96px">
+    <div style="padding:0 var(--pr) 0 var(--pl)">
+      <h1 style="font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(2.25rem,1.5rem + 2.4vw,3.44rem);line-height:1.5;letter-spacing:-0.01em;margin:0">Revenue has stalled.<br>We <em style="font-weight:300;color:#D9714F">fix it.</em></h1>
+    </div>
+    <svg sc-camel-view-box="0 0 1440 180" sc-camel-preserve-aspect-ratio="none" style="display:block;width:100%;height:clamp(90px,12vw,180px);margin-top:-8px" aria-hidden="true"><path d="M0 172 C 560 170 980 120 1440 6" fill="none" stroke="#767E81" stroke-width="1.4" vector-effect="non-scaling-stroke"></path></svg>
+    <div style="padding:0 var(--pr) 0 var(--pl);display:flex;flex-direction:column;align-items:flex-end;gap:28px;margin-top:8px">
+      <p style="font-size:clamp(1.13rem,1.05rem + 0.3vw,1.25rem);line-height:1.5;color:#EDE9E1;margin:0;max-width:52ch;text-align:right;text-wrap:balance">For investors with Series A–B portfolio companies struggling to get traction for the next stage.</p>
+      <a href="#contact" style="background:#D9714F;color:#1A1F21;padding:14px 30px;font-size:18px;font-weight:600;min-height:46px;box-sizing:border-box;display:inline-flex;align-items:center" style-hover="background:#C4593A;color:#1A1F21">Let’s talk</a>
+    </div>
+  </section>
+
+  <section data-screen-label="Who we are" style="position:relative;z-index:2;background:#242A2C;padding:72px var(--pl);display:flex;flex-direction:column;align-items:center;gap:24px;text-align:center">
+    <div style="font-size:16px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#D9714F">Who we are</div>
+    <p style="font-family:Newsreader,Georgia,serif;font-style:italic;font-weight:300;font-size:clamp(1.38rem,1.2rem + 0.7vw,1.88rem);line-height:1.35;margin:0;max-width:72ch;text-wrap:balance">“We are former CEOs, investors, and operators who have lived the moment when a company has potential and have felt the frustration when growth isn’t materializing.”</p>
+  </section>
+
+  <section id="problem" data-screen-label="The problem" style="position:relative;padding:88px var(--pr) 104px var(--pl);display:flex;flex-direction:column">
+    <div style="font-size:16px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#D9714F">The problem</div>
+    <h2 style="font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(1.63rem,1.35rem + 0.9vw,2.13rem);line-height:1.15;margin:24px 0 0">If revenue hides a multitude of sins…</h2>
+    <p style="font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(1.63rem,1.35rem + 0.9vw,2.13rem);line-height:1.15;margin:24px 0 0;align-self:flex-end;text-align:right;text-wrap:balance">…then missing revenue targets must be <em style="color:#D9714F">pure hell.</em></p>
+
+    <p style="font-size:clamp(1.25rem,1.1rem + 0.4vw,1.38rem);line-height:1.5;color:#EDE9E1;margin:176px 0 0;max-width:none;text-wrap:pretty">Post-Series A, revenue stalls. Now, they just can’t seem to turn the corner.</p>
+    <div style="display:flex;align-items:center;gap:16px;margin-top:88px"><span style="font-size:16px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#B9BEC0">The missed revenue timeline</span><span style="flex:1;height:1px;background:#353C3E"></span><span style="font-size:16px;color:#B9BEC0" aria-hidden="true">→</span></div>
+
+    <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
+      <div style="position:relative;width:100%;aspect-ratio:1000/290;margin-top:40px" aria-label="Revenue drifting downward across four phases">
+        <svg sc-camel-view-box="0 0 1000 290" style="position:absolute;inset:0;width:100%;height:100%" aria-hidden="true">
+          <path d="M180 40 C 460 40 760 100 960 214" fill="none" stroke="#B9BEC0" stroke-width="1.5"></path>
+          <circle cx="180" cy="40" r="7" fill="#EDE9E1"></circle>
+          <circle cx="460" cy="59" r="7" fill="#EDE9E1"></circle>
+          <circle cx="680" cy="104" r="7" fill="#C4593A"></circle>
+          <circle cx="960" cy="214" r="7" fill="#C4593A"></circle>
+        </svg>
+        <div style="position:absolute;left:18%;top:13.8%;transform:translate(-50%,-100%);margin-top:-14px;font-size:16px;font-weight:600;color:#EDE9E1">Q1</div>
+        <div style="position:absolute;left:46%;top:20.3%;transform:translate(-50%,-100%);margin-top:-14px;font-size:16px;font-weight:600;color:#EDE9E1">Q2</div>
+        <div style="position:absolute;left:68%;top:35.9%;transform:translate(-50%,-100%);margin-top:-14px;font-size:16px;font-weight:600;color:#D9714F">Q3</div>
+        <div style="position:absolute;left:96%;top:73.8%;transform:translate(-50%,-100%);margin-top:-14px;font-size:16px;font-weight:600;color:#D9714F">Q4</div>
+        <div style="position:absolute;right:82%;top:13.8%;margin:26px 0 0;text-align:right;font-size:16px;line-height:1.4;color:#EDE9E1;white-space:nowrap">The honeymoon phase</div>
+        <div style="position:absolute;right:54%;top:20.3%;margin:26px 0 0;text-align:right;display:flex;flex-direction:column;gap:10px;width:max-content;max-width:230px"><span style="font-size:16px;line-height:1.4;color:#EDE9E1">The go-to-market “fix”</span><span style="font-family:Newsreader,Georgia,serif;font-style:italic;font-size:16px;line-height:1.35;color:#8B9296">“We just need to fix our messaging.”<br>“We just need to step up go-to-market.”</span></div>
+        <div style="position:absolute;right:32%;top:35.9%;margin:26px 0 0;text-align:right;display:flex;flex-direction:column;gap:10px;width:max-content"><span style="font-size:16px;line-height:1.4;color:#EDE9E1">The people “fix”</span><span style="font-family:Newsreader,Georgia,serif;font-style:italic;font-size:16px;line-height:1.35;color:#8B9296">“We replaced the CRO.”</span></div>
+        <div style="position:absolute;right:4%;top:73.8%;margin:26px 0 0;text-align:right;display:flex;flex-direction:column;gap:10px;width:max-content;max-width:250px"><span style="font-size:16px;line-height:1.4;color:#EDE9E1">The market expansion “fix”</span><span style="font-family:Newsreader,Georgia,serif;font-style:italic;font-size:16px;line-height:1.35;color:#8B9296">“We can get more revenue if our market is bigger.”</span></div>
+      </div>
+    </sc-if>
+    <sc-if value="{{ narrow }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex;flex-direction:column;gap:24px;margin-top:32px;border-left:1px solid #767E81;padding-left:20px">
+        <div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:16px;font-weight:600;color:#EDE9E1">Q1</span><span style="font-size:16px;color:#EDE9E1">The honeymoon phase</span></div>
+        <div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:16px;font-weight:600;color:#EDE9E1">Q2</span><span style="font-size:16px;color:#EDE9E1">The go-to-market “fix”</span><span style="font-family:Newsreader,Georgia,serif;font-style:italic;font-size:16px;color:#8B9296">“We just need to fix our messaging.” “We just need to step up go-to-market.”</span></div>
+        <div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:16px;font-weight:600;color:#D9714F">Q3</span><span style="font-size:16px;color:#EDE9E1">The people “fix”</span><span style="font-family:Newsreader,Georgia,serif;font-style:italic;font-size:16px;color:#8B9296">“We replaced the CRO.”</span></div>
+        <div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:16px;font-weight:600;color:#D9714F">Q4</span><span style="font-size:16px;color:#EDE9E1">The market expansion “fix”</span><span style="font-family:Newsreader,Georgia,serif;font-style:italic;font-size:16px;color:#8B9296">“We can get more revenue if our market is bigger.”</span></div>
+      </div>
+    </sc-if>
+
+    <p style="font-size:18px;line-height:1.6;color:#EDE9E1;margin:72px 0 0;max-width:56ch">They’re trying new fixes, revisiting decisions, and pursuing every possible opportunity for revenue.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:32px 56px;align-items:center;margin-top:160px">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div style="font-size:clamp(1.25rem,1.1rem + 0.4vw,1.38rem);line-height:1.5;color:#EDE9E1">The familiar pattern leaves you wondering</div>
+        <div style="font-family:Newsreader,Georgia,serif;font-weight:300;font-style:italic;font-size:clamp(2rem,1.5rem + 1.4vw,2.75rem);line-height:1.1;color:#EDE9E1">“Do I need to step in?”</div>
+      </div>
+      <svg sc-camel-view-box="0 0 260 96" style="display:block;width:100%;max-width:480px;height:auto;justify-self:center" aria-hidden="true"><path d="M96 26 H206" stroke="#EDE9E1" stroke-width="1.3"></path><path d="M74 48 H184" stroke="#EDE9E1" stroke-width="1.3" stroke-dasharray="2 5"></path><path d="M52 70 H162" stroke="#EDE9E1" stroke-width="1.3"></path></svg>
+    </div>
+
+    <p style="font-size:18px;line-height:1.6;color:#EDE9E1;margin:88px 0 0">You know it’s time.<br>But your bandwidth is limited.</p>
+  </section>
+
+  <section data-screen-label="Band · frustration" style="position:relative;z-index:2;background:#242A2C;padding:72px var(--pl);display:flex;justify-content:center;text-align:center">
+    <p style="font-family:Newsreader,Georgia,serif;font-style:italic;font-weight:300;font-size:clamp(1.38rem,1.2rem + 0.7vw,1.88rem);line-height:1.35;margin:0;max-width:72ch;text-wrap:balance">“Nothing is more frustrating than watching a company with real upside never get the momentum to prove it, or fail for reasons that were preventable.”</p>
+  </section>
+
+  <section id="solution" data-screen-label="Arena solution" style="position:relative;padding:88px var(--pr) 104px var(--pl);display:flex;flex-direction:column">
+    <div style="font-size:16px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#D9714F">Arena solution</div>
+    <h2 style="font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(1.63rem,1.35rem + 0.9vw,2.13rem);line-height:1.25;margin:24px 0 0;max-width:40ch;text-wrap:balance">We partner with funds to move Series A–B companies back into <em style="color:#D9714F">successful wins…</em></h2>
+    <svg sc-camel-view-box="0 0 260 90" style="display:block;width:100%;max-width:360px;height:auto;align-self:center;margin:56px 0 0" aria-label="A clay weight carrying the business up out of the trough"><path d="M20 34 Q120 90 240 24" stroke="#EDE9E1" stroke-width="1.3" fill="none"></path><circle cx="177.2" cy="36.3" r="13" fill="#C4593A"></circle></svg>
+    <p style="font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(1.38rem,1.2rem + 0.6vw,1.75rem);line-height:1.3;margin:56px 0 0;align-self:flex-end;text-align:right;max-width:52ch;text-wrap:balance">…without placing the burden on partners to shepherd companies when they should be out doing the next deal.</p>
+  </section>
+
+  <section id="how" data-screen-label="How it works" style="position:relative;padding:128px 0 96px">
+    <div style="padding:0 var(--pr) 0 var(--pl);display:flex;flex-direction:column">
+      <div style="font-size:16px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#D9714F">Arena solution: How it works</div>
+      <p style="font-size:clamp(1.25rem,1.1rem + 0.4vw,1.38rem);line-height:1.5;color:#EDE9E1;margin:32px 0 0">We work with founders and executive teams to</p>
+      <h2 style="font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(1.63rem,1.35rem + 0.9vw,2.13rem);line-height:1.25;margin:8px 0 0;max-width:none;text-wrap:pretty">enact the <em style="color:#D9714F">decisions and focus</em> they need in order to reach the next stage.</h2>
+    </div>
+    <div style="position:relative;margin-top:96px;padding:0 var(--pr) 0 var(--pl)">
+      <svg sc-camel-view-box="0 0 1440 320" sc-camel-preserve-aspect-ratio="none" style="position:absolute;left:0;right:0;top:0;bottom:0;width:100%;height:100%;z-index:1;pointer-events:none" aria-hidden="true"><path d="M40 300 C 560 296 1100 250 1440 20" fill="none" stroke="#767E81" stroke-width="1.4" vector-effect="non-scaling-stroke"></path></svg>
+      <div style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:24px;align-items:end;padding-bottom:48px">
+        <div style="background:#242A2C;border-top:2px solid #C4593A;padding:24px;min-height:{{ step1 }};box-sizing:border-box"><div style="font-size:18px;line-height:1.45;color:#EDE9E1;max-width:none;text-wrap:balance">Develop where to (and where not to) win</div></div>
+        <div style="background:#242A2C;border-top:2px solid #C4593A;padding:24px;min-height:{{ step2 }};box-sizing:border-box"><div style="font-size:18px;line-height:1.45;color:#EDE9E1;max-width:none;text-wrap:balance">Codify the long-term strategy</div></div>
+        <div style="background:#242A2C;border-top:2px solid #C4593A;padding:24px;min-height:{{ step3 }};box-sizing:border-box"><div style="font-size:18px;line-height:1.45;color:#EDE9E1;max-width:none;text-wrap:balance">Align the business around the new direction</div></div>
+      </div>
+    </div>
+    <div style="padding:0 var(--pr) 0 var(--pl);display:flex;justify-content:flex-end;margin-top:24px">
+      <a href="#contact" style="border:1px solid #EDE9E1;color:#EDE9E1;padding:13px 29px;font-size:18px;font-weight:600;min-height:46px;box-sizing:border-box;display:inline-flex;align-items:center;text-align:center" style-hover="border-color:#D9714F;color:#D9714F">See what it looks like to work with us</a>
+    </div>
+  </section>
+
+  <section data-screen-label="Band · our job" style="position:relative;z-index:2;background:#242A2C;padding:72px var(--pl);display:flex;justify-content:center;text-align:center">
+    <p style="font-family:Newsreader,Georgia,serif;font-style:italic;font-weight:300;font-size:clamp(1.38rem,1.2rem + 0.7vw,1.88rem);line-height:1.35;margin:0;max-width:78ch;text-wrap:balance">“If we can take a company that is struggling to realize the potential that they are trying to manifest and help <span style="color:#D9714F">move that company into the win column,</span> we’ve done our job.”</p>
+  </section>
+
+  <section id="why" data-screen-label="Why Arena" style="position:relative;padding:72px 0 104px;display:flex;flex-direction:column">
+    <div style="padding:0 var(--pr) 0 var(--pl);display:flex;flex-direction:column">
+      <div style="font-size:16px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#D9714F">Why Arena</div>
+      <h2 style="font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(1.63rem,1.35rem + 0.9vw,2.13rem);line-height:1.15;margin:24px 0 0">We’ve been in the Arena ourselves.</h2>
+      <p style="font-size:18px;line-height:1.7;color:#EDE9E1;margin:24px 0 0;max-width:64ch">As former venture-backed CEOs, we’ve run these companies. As investors, we’ve funded them. And as operators, we’ve done the work firsthand.</p>
+    </div>
+
+    <div style="margin:88px calc(var(--sr) - clamp(0px,3vw,48px)) 0 clamp(24px,19%,280px);background:#242A2C;padding:clamp(24px,3.5vw,48px) clamp(20px,4vw,64px);display:grid;grid-template-columns:{{ roleCols }};gap:28px 24px;align-items:center">
+      <span style="font-size:18px;color:#EDE9E1;text-align:{{ roleAlign }}">Investor</span>
+      <span style="display:block;height:2px;width:clamp(56px,6vw,96px);background:#C4593A"></span>
+      <span style="font-size:18px;color:#EDE9E1">Investor-aligned direction</span>
+      <span style="font-size:18px;color:#EDE9E1;text-align:{{ roleAlign }}">CEO</span>
+      <span style="display:block;height:1px;width:clamp(72px,8vw,140px);background:#EDE9E1"></span>
+      <span style="font-size:18px;color:#EDE9E1">Judgement the CEO can trust</span>
+      <span style="font-size:18px;color:#EDE9E1;text-align:{{ roleAlign }}">Operator</span>
+      <span style="display:block;height:1px;width:clamp(88px,10vw,160px);background:#EDE9E1"></span>
+      <span style="font-size:18px;color:#EDE9E1">Translation from strategy to action</span>
+    </div>
+
+    <div style="padding:0 var(--pr) 0 var(--pl);margin-top:64px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px 40px">
+      <p style="font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(1.38rem,1.2rem + 0.6vw,1.75rem);line-height:1.35;margin:0;max-width:48ch;text-wrap:balance">Arena’s approach combines all three to <em style="color:#D9714F">build the path to revenue</em> and get the opportunity back on track.</p>
+      <a href="#about" style="border:1px solid #EDE9E1;color:#EDE9E1;padding:13px 29px;font-size:18px;font-weight:600;min-height:46px;box-sizing:border-box;display:inline-flex;align-items:center" style-hover="border-color:#D9714F;color:#D9714F">About us</a>
+    </div>
+  </section>
+
+  <section id="result" data-screen-label="The result" style="position:relative;padding:0 var(--pr) 120px var(--pl);display:flex;flex-direction:column">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:40px 56px;align-items:center">
+      <div style="display:flex;flex-direction:column">
+        <div style="font-size:16px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#D9714F">The result</div>
+        <h2 style="font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(1.63rem,1.35rem + 0.9vw,2.13rem);line-height:1.15;margin:24px 0 0">The goal is revenue.</h2>
+        <p style="font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(1.63rem,1.35rem + 0.9vw,2.13rem);line-height:1.15;margin:32px 0 0">The outcome is another <em style="color:#D9714F">win.</em></p>
+      </div>
+      <svg sc-camel-view-box="30 20 200 125" style="display:block;width:100%;max-width:260px;height:auto;justify-self:center" aria-label="Momentum: a clay node sets the still line moving"><path d="M40 30 H210" stroke="#353C3E" stroke-width="1"></path><path d="M88 30 V122" stroke="#EDE9E1" stroke-width="1.3"></path><path d="M112 30 V122" stroke="#EDE9E1" stroke-width="1.3"></path><path d="M136 30 V122" stroke="#EDE9E1" stroke-width="1.3"></path><circle cx="88" cy="130" r="8" fill="#EDE9E1"></circle><circle cx="112" cy="130" r="8" fill="#EDE9E1"></circle><circle cx="136" cy="130" r="8" fill="#EDE9E1"></circle><path d="M160 30 L197 115" stroke="#C4593A" stroke-width="1.3"></path><circle cx="200" cy="122" r="8" fill="#C4593A"></circle></svg>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px 40px;margin-top:104px">
+      <p style="font-size:clamp(1.25rem,1.1rem + 0.4vw,1.38rem);line-height:1.5;color:#EDE9E1;margin:0;max-width:54ch;text-wrap:pretty">If you have a portfolio company that’s struggling to get the revenue growth and traction you need to see, we’d love to talk and learn more.</p>
+      <a href="#contact" style="background:#D9714F;color:#1A1F21;padding:14px 30px;font-size:18px;font-weight:600;min-height:46px;box-sizing:border-box;display:inline-flex;align-items:center" style-hover="background:#C4593A;color:#1A1F21">Let’s talk</a>
+    </div>
+  </section>
+
+  <section id="contact" data-screen-label="Close" style="position:relative;padding:120px 0 72px">
+    <div style="padding:0 var(--pr) 0 var(--pl);display:flex;justify-content:flex-end">
+      <p style="font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(1.38rem,1.2rem + 0.6vw,1.75rem);line-height:1.35;margin:0;max-width:34ch;text-align:right;text-wrap:balance">When the opportunity is real but the path to capturing it isn’t, we help you <em style="color:#D9714F">get the win back.</em></p>
+    </div>
+    <svg sc-camel-view-box="0 0 1440 160" sc-camel-preserve-aspect-ratio="none" style="display:block;width:100%;height:clamp(80px,11vw,160px);margin-top:8px" aria-hidden="true"><path d="M0 150 C 560 148 1000 110 1440 6" fill="none" stroke="#767E81" stroke-width="1.4" vector-effect="non-scaling-stroke"></path></svg>
+    <div style="padding:0 var(--pr) 0 var(--pl);display:flex;justify-content:flex-end;margin-top:16px">
+      <a href="mailto:hello@arenapartners.com" style="border:1px solid #EDE9E1;color:#EDE9E1;padding:13px 29px;font-size:18px;font-weight:600;min-height:46px;box-sizing:border-box;display:inline-flex;align-items:center" style-hover="border-color:#D9714F;color:#D9714F">Contact us</a>
+    </div>
+  </section>
+
+  <footer style="position:relative;border-top:1px solid #353C3E;padding:28px var(--pr) 32px var(--pl);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px 32px">
+    <a href="#top" style="font-size:16px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#D9714F">Arena Partners</a>
+    <nav style="display:flex;flex-wrap:wrap;gap:8px clamp(24px,4vw,64px);font-size:16px;font-weight:500">
+      <a href="#why" style="color:#EDE9E1">About us</a>
+      <a href="#how" style="color:#EDE9E1">How we work</a>
+      <a href="#blog" style="color:#EDE9E1">Blog</a>
+      <a href="#letter" style="color:#EDE9E1">Letter to investors</a>
+    </nav>
+    <div style="font-size:16px;color:#8B9296">© Arena Partners 2026</div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;spine&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;clay&quot;,&quot;bone&quot;],&quot;default&quot;:&quot;clay&quot;,&quot;tsType&quot;:&quot;'clay'|'bone'&quot;,&quot;section&quot;:&quot;Lines&quot;}}">
+class Component extends DCLogic {
+  state = { w: typeof window !== 'undefined' ? window.innerWidth : 1440 };
+  componentDidMount() { this.onR = () => this.setState({ w: window.innerWidth }); window.addEventListener('resize', this.onR); }
+  componentWillUnmount() { window.removeEventListener('resize', this.onR); }
+  renderVals() {
+    const spine = this.props.spine ?? 'clay';
+    const wide = this.state.w >= 1180;
+    const stack = this.state.w < 720;
+    return {
+      spineClay: spine === 'clay', spineBone: spine === 'bone',
+      wide, narrow: !wide,
+      step1: stack ? '128px' : '200px', step2: stack ? '128px' : '248px', step3: stack ? '128px' : '296px',
+      roleCols: stack ? 'minmax(0,1fr)' : 'max-content max-content minmax(0,1fr)',
+      roleAlign: stack ? 'left' : 'right'
+    };
+  }
+}
+</script>
+</body>
+</html>
