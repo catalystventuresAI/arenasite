@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  html,body{margin:0;background:#1A1F21}
+  a{color:#EDE9E1;text-decoration:none}
+  a:hover{color:#D9714F}
+  :focus-visible{outline:2px solid #EDE9E1;outline-offset:2px}
+  input::placeholder,textarea::placeholder{color:#767E81}
+</style>
+</helmet>
+<div data-screen-label="Contact" style="position:relative;min-height:100vh;display:flex;flex-direction:column;background:#1A1F21;color:#EDE9E1;font-family:'IBM Plex Sans',system-ui,sans-serif;overflow:hidden;--pl:clamp(24px,5.5vw,88px);--sr:clamp(16px,10.5vw,168px);--pr:calc(var(--sr) + clamp(16px,4.5vw,64px))">
+  <div style="position:absolute;top:0;bottom:0;right:var(--sr);width:3px;background:#C4593A;z-index:1;pointer-events:none"></div>
+
+  <header style="position:relative;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px 32px;padding:20px var(--pr) 20px var(--pl);border-bottom:1px solid #353C3E">
+    <a href="index.html" style="font-size:16px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#D9714F">Arena Partners</a>
+    <nav style="display:flex;flex-wrap:wrap;align-items:center;gap:8px clamp(24px,4vw,64px);font-size:16px;font-weight:500">
+      <a href="index.html#why" style="color:#EDE9E1">About us</a>
+      <a href="how-it-works.html" style="color:#EDE9E1">How we work</a>
+      <a href="#blog" style="color:#EDE9E1">Blog</a>
+      <a href="#letter" style="color:#EDE9E1">Letter to investors</a>
+      <a href="contact.html" aria-current="page" style="border:1px solid #D9714F;color:#D9714F;padding:10px 22px;min-height:44px;box-sizing:border-box;display:flex;align-items:center">Contact</a>
+    </nav>
+  </header>
+
+  <section data-screen-label="Contact hero" style="position:relative;padding:72px 0 0">
+    <div style="padding:0 var(--pr) 0 var(--pl);display:flex;flex-direction:column;gap:20px">
+      <div style="font-size:13px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#D9714F">Contact</div>
+      <h1 style="font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(2.25rem,1.5rem + 2.4vw,3.44rem);line-height:1.3;letter-spacing:-0.01em;margin:0">Let’s talk.</h1>
+          </div>
+    <svg sc-camel-view-box="0 0 1440 180" sc-camel-preserve-aspect-ratio="none" style="display:block;width:100%;height:clamp(80px,10vw,150px);margin-top:24px" aria-hidden="true"><path d="M0 172 C 560 170 980 120 1440 6" fill="none" stroke="#767E81" stroke-width="1.4" vector-effect="non-scaling-stroke"></path></svg>
+  </section>
+
+  <section id="form" data-screen-label="Form" style="position:relative;flex:1;padding:56px var(--pr) 160px var(--pl);display:flex;flex-direction:column;gap:40px">
+    <p style="font-size:18px;line-height:1.6;color:#EDE9E1;margin:0;max-width:56ch;text-wrap:pretty">Have an opportunity you want to discuss or interested in learning more? Reach out to us below.</p>
+
+    <div style="min-width:0;max-width:760px;width:100%">
+      <sc-if value="{{ showSlot }}" hint-placeholder-val="{{ false }}">
+        <div style="border:1px dashed #767E81;background:#1F2527;min-height:560px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:40px;box-sizing:border-box;text-align:center">
+          <div style="font-size:13px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#D9714F">Form embed</div>
+          <div style="font-size:18px;line-height:1.5;color:#EDE9E1;max-width:36ch">Place the WordPress form block or shortcode here.</div>
+          <div style="font-size:16px;line-height:1.5;color:#8B9296;max-width:44ch">Full column width, auto height. Style to match the reference version (toggle in Tweaks).</div>
+        </div>
+      </sc-if>
+      <sc-if value="{{ showRef }}" hint-placeholder-val="{{ true }}">
+        <form sc-camel-on-submit="{{ onSubmit }}" style="background:#242A2C;padding:clamp(28px,4vw,56px);display:flex;flex-direction:column;gap:28px;box-sizing:border-box">
+          <label style="display:flex;flex-direction:column;gap:10px;font-size:15px;font-weight:500;color:#B9BEC0">Name<input name="name" required="" autocomplete="name" style="font:inherit;font-size:18px;font-weight:400;color:#EDE9E1;background:#1A1F21;border:1px solid #353C3E;border-radius:0;padding:14px 16px;min-height:52px;box-sizing:border-box;outline:none" style-focus="border-color:#D9714F"></label>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:28px 24px">
+            <label style="display:flex;flex-direction:column;gap:10px;font-size:15px;font-weight:500;color:#B9BEC0">Email<input name="email" type="email" required="" autocomplete="email" style="font:inherit;font-size:18px;font-weight:400;color:#EDE9E1;background:#1A1F21;border:1px solid #353C3E;border-radius:0;padding:14px 16px;min-height:52px;box-sizing:border-box;outline:none" style-focus="border-color:#D9714F"></label>
+            <label style="display:flex;flex-direction:column;gap:10px;font-size:15px;font-weight:500;color:#B9BEC0">Phone (optional)<input name="phone" type="tel" autocomplete="tel" style="font:inherit;font-size:18px;font-weight:400;color:#EDE9E1;background:#1A1F21;border:1px solid #353C3E;border-radius:0;padding:14px 16px;min-height:52px;box-sizing:border-box;outline:none" style-focus="border-color:#D9714F"></label>
+          </div>
+          <label style="display:flex;flex-direction:column;gap:10px;font-size:15px;font-weight:500;color:#B9BEC0">Tell us about your inquiry<textarea name="message" rows="6" required="" style="font:inherit;font-size:18px;font-weight:400;color:#EDE9E1;background:#1A1F21;border:1px solid #353C3E;border-radius:0;padding:14px 16px;box-sizing:border-box;outline:none;line-height:1.5;resize:vertical" style-focus="border-color:#D9714F"></textarea></label>
+          <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px 32px;margin-top:8px">
+            <div style="font-size:15px;line-height:1.5;color:#8B9296" aria-live="polite">{{ status }}</div>
+            <button type="submit" style="margin-left:auto;font:inherit;background:#D9714F;color:#1A1F21;border:none;border-radius:0;padding:14px 30px;font-size:18px;font-weight:600;min-height:46px;cursor:pointer" style-hover="background:#C4593A">Send</button>
+          </div>
+        </form>
+      </sc-if>
+    </div>
+  </section>
+
+  <footer style="position:relative;border-top:1px solid #353C3E;padding:28px var(--pr) 32px var(--pl);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px 32px">
+    <a href="index.html" style="font-size:16px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#D9714F">Arena Partners</a>
+    <nav style="display:flex;flex-wrap:wrap;gap:8px clamp(24px,4vw,64px);font-size:16px;font-weight:500">
+      <a href="index.html#why" style="color:#EDE9E1">About us</a>
+      <a href="how-it-works.html" style="color:#EDE9E1">How we work</a>
+      <a href="#blog" style="color:#EDE9E1">Blog</a>
+      <a href="#letter" style="color:#EDE9E1">Letter to investors</a>
+    </nav>
+    <div style="font-size:16px;color:#8B9296">© Arena Partners 2026</div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;formArea&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;reference&quot;,&quot;embed slot&quot;],&quot;default&quot;:&quot;reference&quot;,&quot;tsType&quot;:&quot;'reference'|'embed slot'&quot;,&quot;section&quot;:&quot;Form&quot;}}">
+class Component extends DCLogic {
+  state = { sent: false };
+  renderVals() {
+    const mode = this.props.formArea ?? 'reference';
+    return {
+      showSlot: mode === 'embed slot',
+      showRef: mode !== 'embed slot',
+      status: this.state.sent ? 'Thanks — preview only, nothing was sent.' : '',
+      onSubmit: e => { e.preventDefault(); this.setState({ sent: true }); }
+    };
+  }
+}
+</script>
+</body>
+</html>

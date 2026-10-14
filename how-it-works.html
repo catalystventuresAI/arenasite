@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arena Partners How It Works</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;1,6..72,300&display=swap">
+<style>
+  /* Layout: homepage system. Dark ground, clay spine on the right edge, type-led sections,
+     four stages down a vertical timeline rail. */
+  :root {
+    --ink: #1A1F21;
+    --panel: #242A2C;
+    --panel-deep: #1F2527;
+    --line: #353C3E;
+    --curve: #767E81;
+    --bone: #EDE9E1;
+    --mute: #B9BEC0;
+    --dim: #8B9296;
+    --clay: #D9714F;
+    --clay-deep: #C4593A;
+    --serif: Newsreader, Georgia, serif;
+    --sans: 'IBM Plex Sans', system-ui, sans-serif;
+    --pl: clamp(24px, 5.5vw, 88px);
+    --sr: clamp(16px, 10.5vw, 168px);
+    --pr: calc(var(--sr) + clamp(16px, 4.5vw, 64px));
+    color-scheme: dark;
+  }
+  html, body { margin: 0; background: var(--ink); }
+  body { color: var(--bone); font-family: var(--sans); }
+  a { color: var(--bone); text-decoration: none; }
+  a:hover { color: var(--clay); }
+  :focus-visible { outline: 2px solid var(--bone); outline-offset: 2px; }
+  em { font-style: italic; color: var(--clay); }
+  .page { position: relative; overflow: hidden; }
+  .spine { position: absolute; top: 0; bottom: 0; right: var(--sr); width: 3px; background: var(--clay-deep); pointer-events: none; z-index: 1; }
+
+  .nw { white-space: nowrap; }
+  .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--clay); margin: 0; }
+  .h2 { font-family: var(--serif); font-weight: 300; font-size: clamp(1.63rem, 1.35rem + 0.9vw, 2.13rem); line-height: 1.2; margin: 0; text-wrap: balance; }
+
+  .site-head, .site-foot { position: relative; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px 32px; }
+  .site-head { padding: 20px var(--pr) 20px var(--pl); border-bottom: 1px solid var(--line); }
+  .site-foot { padding: 28px var(--pr) 32px var(--pl); border-top: 1px solid var(--line); }
+  .brand { font-size: 16px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--clay); }
+  .nav { display: flex; flex-wrap: wrap; align-items: center; gap: 8px clamp(24px, 4vw, 64px); font-size: 16px; font-weight: 500; }
+  .nav .contact { border: 1px solid var(--bone); padding: 10px 22px; min-height: 44px; box-sizing: border-box; display: flex; align-items: center; }
+  .nav .contact:hover { border-color: var(--clay); }
+  .nav [aria-current="page"] { color: var(--clay); }
+  .copyright { font-size: 16px; color: var(--dim); }
+
+  .hero { position: relative; padding: 72px 0 0; }
+  .hero-in { padding: 0 var(--pr) 0 var(--pl); display: flex; flex-direction: column; gap: 24px; max-width: 100%; box-sizing: border-box; }
+  .hero h1 { font-family: var(--serif); font-weight: 300; font-size: clamp(2.25rem, 1.5rem + 2.4vw, 3.44rem); line-height: 1.2; letter-spacing: -0.01em; margin: 0 0 clamp(16px, 2vw, 28px); max-width: none; text-wrap: balance; }
+  .hero p { font-size: clamp(1.06rem, 1rem + 0.25vw, 1.19rem); line-height: 1.6; color: var(--mute); margin: 0; max-width: 62ch; text-wrap: pretty; }
+  .hero p .brk-hero { display: block; margin-top: 16px; }
+  .curve { display: block; width: 100%; height: clamp(70px, 9vw, 130px); margin-top: 12px; }
+
+  .overview { position: relative; padding: clamp(64px, 6.5vw, 96px) var(--pr) clamp(120px, 14vw, 200px) var(--pl); display: flex; flex-direction: column; gap: 24px; }
+  .overview .h2, .next-card .h2 { line-height: 1.5; }
+  .overview .h2 { margin-bottom: clamp(16px, 2vw, 28px); }
+  /* Fixed width: 13.3 x the H1 font size. This equals the width of the earlier H1 text. It does not follow the current H1. */
+  .overview .h2 { max-width: calc(clamp(2.25rem, 1.5rem + 2.4vw, 3.44rem) * 13.3); text-wrap: wrap; }
+
+  .basics-wrap { display: flex; flex-direction: column; gap: 20px; margin-top: 24px; max-width: 1000px; }
+  .lead-in { font-size: 18px; line-height: 1.5; color: var(--mute); margin: 0; }
+  .basics { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+  .basics li { display: grid; grid-template-columns: 8px minmax(0, 1fr); gap: clamp(20px, 3vw, 32px); align-items: start; padding: clamp(20px, 2.4vw, 28px) 0; border-bottom: 1px solid var(--line); font-size: 15px; line-height: 1.6; color: var(--mute); min-width: 0; text-wrap: pretty; }
+  .basics li::before { content: ""; width: 8px; height: 8px; background: var(--clay-deep); margin-top: 0.5em; }
+
+  .eyebrow-lg { font-size: clamp(1.06rem, 1rem + 0.25vw, 1.19rem); font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; line-height: 1.6; color: var(--mute); margin: clamp(72px, 9vw, 120px) 0 0; }
+  .tl { list-style: none; margin: 32px 0 0; padding: 0; position: relative; display: flex; flex-direction: column; gap: clamp(88px, 11vw, 160px); max-width: 1200px; }
+  .tl::before { content: ""; position: absolute; left: 7px; top: 8px; bottom: 8px; width: 1px; background: var(--curve); }
+  .tl li { position: relative; display: grid; grid-template-columns: 16px minmax(0, 1fr); gap: clamp(28px, 4vw, 56px); min-width: 0; }
+  .tl li::before { content: ""; width: 15px; height: 15px; background: var(--clay-deep); margin-top: 2px; position: relative; }
+  .tl li:last-child::before { background: var(--ink); border: 1px solid var(--clay); box-sizing: border-box; }
+  .tl .txt { display: flex; flex-direction: column; gap: 20px; min-width: 0; }
+  .tl .label { font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--clay); }
+  .tl h3 { font-family: var(--serif); font-weight: 300; font-size: clamp(1.75rem, 1.4rem + 1.2vw, 2.5rem); line-height: 1.2; margin: 0 0 4px; text-wrap: balance; }
+  .tl p { font-size: clamp(1.06rem, 1rem + 0.25vw, 1.19rem); line-height: 1.8; color: var(--mute); margin: 0; max-width: 84ch; text-wrap: pretty; }
+  .tl .brk { display: block; margin-top: 20px; }
+
+  .band { position: relative; z-index: 2; background: var(--panel); padding: 88px var(--pl); display: flex; justify-content: center; text-align: center; }
+  .band p { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: clamp(1.38rem, 1.2rem + 0.7vw, 1.88rem); line-height: 1.35; margin: 0; max-width: 56ch; text-wrap: balance; }
+  .band span { color: var(--clay); }
+
+  .next { position: relative; padding: 160px var(--pr) 128px var(--pl); }
+  .next-card { background: var(--panel); padding: clamp(28px, 4vw, 56px); display: flex; flex-direction: column; gap: 24px; box-sizing: border-box; }
+  .next-card .h2 { max-width: 56ch; }
+  .next-row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px 40px; margin-top: 16px; }
+  .next-row p { font-size: 18px; line-height: 1.65; color: var(--mute); margin: 0; max-width: 56ch; text-wrap: pretty; flex: 1 1 320px; }
+  .next-row p .brk-next { display: block; margin-top: 16px; }
+  .cta { flex: none; margin-left: auto; background: var(--clay); color: var(--ink); padding: 14px 30px; font-size: 18px; font-weight: 600; min-height: 46px; box-sizing: border-box; display: inline-flex; align-items: center; }
+  .cta:hover { background: var(--clay-deep); color: var(--ink); }
+
+  @media (max-width: 720px) {
+    .overview { padding-block: 64px 96px; }
+    .hero { padding-top: 48px; }
+    .band { padding-block: 64px; }
+    .next { padding-block: 104px 96px; }
+    .cta { margin-left: 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <div class="spine" aria-hidden="true"></div>
+
+  <!-- HEADER: copy of the homepage header. Replace with the site's shared header. Set the real URLs. -->
+  <header class="site-head">
+    <a class="brand" href="index.html">Arena Partners</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html#why">About us</a>
+      <a href="how-it-works.html" aria-current="page">How we work</a>
+      <a href="#blog">Blog</a>
+      <a href="#letter">Letter to investors</a>
+      <a class="contact" href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-h1">
+      <div class="hero-in">
+        <h1 id="hero-h1">Work with us</h1>
+        <p>Arena doesn't just make a recommendation and step back. <span class="brk-hero">We develop the plan, put it into action alongside the team, and leave behind an organization that is more capable and self-sufficient to lead what comes next.</span></p>
+      </div>
+      <svg class="curve" viewBox="0 0 1440 180" preserveAspectRatio="none" aria-hidden="true"><path d="M0 172 C 560 170 980 120 1440 6" fill="none" stroke="#767E81" stroke-width="1.4" vector-effect="non-scaling-stroke"/></svg>
+    </section>
+
+    <section class="overview" aria-labelledby="overview-h2">
+      <p class="eyebrow">How we engage</p>
+      <h2 class="h2" id="overview-h2">We <em>embed with your portfolio company,</em> from the board and CEO down to the individual contributors.</h2>
+
+      <div class="basics-wrap">
+        <p class="lead-in">A typical engagement spans 6-12 months, with:</p>
+        <ul class="basics">
+          <li>Two people dedicated to each engagement: a senior executive working with the CEO and board, and an operator with directors and teams.</li>
+          <li>A board-level update every 30 days, and Arena presents live at board meetings.</li>
+          <li>Presence in leadership, product, sales, and marketing meetings.</li>
+          <li>Availability post-engagement.</li>
+        </ul>
+      </div>
+
+      <p class="eyebrow-lg">How it works</p>
+      <ol class="tl">
+      <li><div class="txt"><span class="label">Month 1</span><h3>Assessment &amp; strategic plan</h3><p>We spend the first month inside the company understanding the business before making a recommendation. We do an in-depth discovery reviewing numbers and current state, and spend time connecting with leadership and joining meetings. <span class="brk">After 30 days, we give the CEO and board a diagnosis of what's limiting revenue growth and deliver the plan for moving forward.</span></p></div></li>
+      <li><div class="txt"><span class="label">Month 2</span><h3>Deliver early wins</h3><p>Once we're aligned with the board and CEO on the plan, we get the business executing by embedding with the team to make the plan operational. <span class="brk">Our priority is to deliver early results and show progress, giving the company and its investors a clear signal that the direction is working.</span></p></div></li>
+      <li><div class="txt"><span class="label">Month 3+</span><h3>Show repeatable success</h3><p>At this stage, our focus is on progressing from early signals to a pattern of wins. <span class="brk">We make results repeatable with a working revenue motion, and build capability within the internal team to support it long term.</span></p></div></li>
+      <li><div class="txt"><span class="label">Transition</span><h3>Secure results and leave behind capability</h3><p>We stay through the handoff to keep growth on track and progressing. <span class="brk">We ensure the team is self-sufficient, the fix holds, and the business is ready for the next stage.</span></p></div></li>
+    </ol>
+    </section>
+
+    <section class="band" aria-label="Summary">
+      <p>Each phase works towards the same goal: <span>fix stalled revenue and get the opportunity back on track.</span></p>
+    </section>
+
+    <section class="next" aria-labelledby="next-h2">
+      <div class="next-card">
+        <p class="eyebrow">What's next</p>
+        <h2 class="h2" id="next-h2">If you have a <span class="nw">Series A-B</span> portfolio company whose revenue is behind, <em>let's talk.</em></h2>
+        <div class="next-row">
+          <p>Whether you have an opportunity in mind or just interested in learning more, we'd love to connect. <span class="brk-next">Reach out to start the conversation.</span></p>
+          <!-- Set the real contact URL -->
+          <a class="cta" href="contact.html">Contact us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER: copy of the homepage footer. Replace with the site's shared footer. Set the real URLs. -->
+  <footer class="site-foot">
+    <a class="brand" href="index.html">Arena Partners</a>
+    <nav class="nav" aria-label="Footer">
+      <a href="index.html#why">About us</a>
+      <a href="how-it-works.html">How we work</a>
+      <a href="#blog">Blog</a>
+      <a href="#letter">Letter to investors</a>
+    </nav>
+    <div class="copyright">© Arena Partners 2026</div>
+  </footer>
+</div>
+
+</body>
+</html>
