@@ -1,8 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WCY68JY0X6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WCY68JY0X6');
+</script>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Arena Partners</title>
+<meta name="description" content="Have a Series A–B portfolio company whose revenue is behind plan? Contact Arena Partners to talk through it.">
+<link rel="canonical" href="https://arenapartners.com/contact.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Arena Partners">
+<meta name="theme-color" content="#1A1F21">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/images/favicon-512.png">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Arena Partners">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://arenapartners.com/contact.html">
+<meta property="og:title" content="Contact | Arena Partners">
+<meta property="og:description" content="Have a Series A–B portfolio company whose revenue is behind plan? Contact Arena Partners to talk through it.">
+<meta property="og:image" content="https://arenapartners.com/images/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Arena Partners logo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact | Arena Partners">
+<meta name="twitter:description" content="Have a Series A–B portfolio company whose revenue is behind plan? Contact Arena Partners to talk through it.">
+<meta name="twitter:image" content="https://arenapartners.com/images/og-image.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"ContactPage","url":"https://arenapartners.com/contact.html","name":"Contact Arena Partners","isPartOf":{"@id":"https://arenapartners.com/#website"},"about":{"@id":"https://arenapartners.com/#organization"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://arenapartners.com/"},{"@type":"ListItem","position":2,"name":"Contact","item":"https://arenapartners.com/contact.html"}]}}]}</script>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -23,12 +56,10 @@
   <div style="position:absolute;top:0;bottom:0;right:var(--sr);width:3px;background:#C4593A;z-index:1;pointer-events:none"></div>
 
   <header style="position:relative;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px 32px;padding:20px var(--pr) 20px var(--pl);border-bottom:1px solid #353C3E">
-    <a href="index.html" style="font-size:16px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#D9714F">Arena Partners</a>
+    <a href="index.html" aria-label="Arena Partners home" style="display:flex;align-items:center"><img src="images/logo-bone.png" alt="Arena Partners" style="display:block;height:56px;width:auto"></a>
     <nav style="display:flex;flex-wrap:wrap;align-items:center;gap:8px clamp(24px,4vw,64px);font-size:16px;font-weight:500">
       <a href="index.html#why" style="color:#EDE9E1">About us</a>
       <a href="how-it-works.html" style="color:#EDE9E1">How we work</a>
-      <a href="#blog" style="color:#EDE9E1">Blog</a>
-      <a href="#letter" style="color:#EDE9E1">Letter to investors</a>
       <a href="contact.html" aria-current="page" style="border:1px solid #D9714F;color:#D9714F;padding:10px 22px;min-height:44px;box-sizing:border-box;display:flex;align-items:center">Contact</a>
     </nav>
   </header>
@@ -54,15 +85,15 @@
       </sc-if>
       <sc-if value="{{ showRef }}" hint-placeholder-val="{{ true }}">
         <form sc-camel-on-submit="{{ onSubmit }}" style="background:#242A2C;padding:clamp(28px,4vw,56px);display:flex;flex-direction:column;gap:28px;box-sizing:border-box">
-          <label style="display:flex;flex-direction:column;gap:10px;font-size:15px;font-weight:500;color:#B9BEC0">Name<input name="name" required="" autocomplete="name" style="font:inherit;font-size:18px;font-weight:400;color:#EDE9E1;background:#1A1F21;border:1px solid #353C3E;border-radius:0;padding:14px 16px;min-height:52px;box-sizing:border-box;outline:none" style-focus="border-color:#D9714F"></label>
+          <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none"><label style="display:flex;flex-direction:column;gap:10px;font-size:15px;font-weight:500;color:#B9BEC0">Name<input name="name" required="required" autocomplete="name" style="font:inherit;font-size:18px;font-weight:400;color:#EDE9E1;background:#1A1F21;border:1px solid #353C3E;border-radius:0;padding:14px 16px;min-height:52px;box-sizing:border-box;outline:none" style-focus="border-color:#D9714F"></label>
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:28px 24px">
-            <label style="display:flex;flex-direction:column;gap:10px;font-size:15px;font-weight:500;color:#B9BEC0">Email<input name="email" type="email" required="" autocomplete="email" style="font:inherit;font-size:18px;font-weight:400;color:#EDE9E1;background:#1A1F21;border:1px solid #353C3E;border-radius:0;padding:14px 16px;min-height:52px;box-sizing:border-box;outline:none" style-focus="border-color:#D9714F"></label>
+            <label style="display:flex;flex-direction:column;gap:10px;font-size:15px;font-weight:500;color:#B9BEC0">Email<input name="email" type="email" required="required" autocomplete="email" style="font:inherit;font-size:18px;font-weight:400;color:#EDE9E1;background:#1A1F21;border:1px solid #353C3E;border-radius:0;padding:14px 16px;min-height:52px;box-sizing:border-box;outline:none" style-focus="border-color:#D9714F"></label>
             <label style="display:flex;flex-direction:column;gap:10px;font-size:15px;font-weight:500;color:#B9BEC0">Phone (optional)<input name="phone" type="tel" autocomplete="tel" style="font:inherit;font-size:18px;font-weight:400;color:#EDE9E1;background:#1A1F21;border:1px solid #353C3E;border-radius:0;padding:14px 16px;min-height:52px;box-sizing:border-box;outline:none" style-focus="border-color:#D9714F"></label>
           </div>
-          <label style="display:flex;flex-direction:column;gap:10px;font-size:15px;font-weight:500;color:#B9BEC0">Tell us about your inquiry<textarea name="message" rows="6" required="" style="font:inherit;font-size:18px;font-weight:400;color:#EDE9E1;background:#1A1F21;border:1px solid #353C3E;border-radius:0;padding:14px 16px;box-sizing:border-box;outline:none;line-height:1.5;resize:vertical" style-focus="border-color:#D9714F"></textarea></label>
+          <label style="display:flex;flex-direction:column;gap:10px;font-size:15px;font-weight:500;color:#B9BEC0">Tell us about your inquiry<textarea name="message" rows="6" required="required" style="font:inherit;font-size:18px;font-weight:400;color:#EDE9E1;background:#1A1F21;border:1px solid #353C3E;border-radius:0;padding:14px 16px;box-sizing:border-box;outline:none;line-height:1.5;resize:vertical" style-focus="border-color:#D9714F"></textarea></label>
           <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px 32px;margin-top:8px">
-            <div style="font-size:15px;line-height:1.5;color:#8B9296" aria-live="polite">{{ status }}</div>
-            <button type="submit" style="margin-left:auto;font:inherit;background:#D9714F;color:#1A1F21;border:none;border-radius:0;padding:14px 30px;font-size:18px;font-weight:600;min-height:46px;cursor:pointer" style-hover="background:#C4593A">Send</button>
+            <div style="font-size:15px;line-height:1.5;color:{{ statusColor }};max-width:44ch" aria-live="polite">{{ status }}</div>
+            <button type="submit" disabled="{{ sending }}" style="margin-left:auto;font:inherit;background:#D9714F;color:#1A1F21;border:none;border-radius:0;padding:14px 30px;font-size:18px;font-weight:600;min-height:46px;cursor:pointer" style-hover="background:#C4593A">{{ btnLabel }}</button>
           </div>
         </form>
       </sc-if>
@@ -70,12 +101,10 @@
   </section>
 
   <footer style="position:relative;border-top:1px solid #353C3E;padding:28px var(--pr) 32px var(--pl);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px 32px">
-    <a href="index.html" style="font-size:16px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#D9714F">Arena Partners</a>
+    <a href="index.html" aria-label="Arena Partners home" style="display:flex;align-items:center"><img src="images/logo-bone.png" alt="Arena Partners" style="display:block;height:40px;width:auto"></a>
     <nav style="display:flex;flex-wrap:wrap;gap:8px clamp(24px,4vw,64px);font-size:16px;font-weight:500">
       <a href="index.html#why" style="color:#EDE9E1">About us</a>
       <a href="how-it-works.html" style="color:#EDE9E1">How we work</a>
-      <a href="#blog" style="color:#EDE9E1">Blog</a>
-      <a href="#letter" style="color:#EDE9E1">Letter to investors</a>
     </nav>
     <div style="font-size:16px;color:#8B9296">© Arena Partners 2026</div>
   </footer>
@@ -83,14 +112,38 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script="" data-props="{&quot;formArea&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;reference&quot;,&quot;embed slot&quot;],&quot;default&quot;:&quot;reference&quot;,&quot;tsType&quot;:&quot;'reference'|'embed slot'&quot;,&quot;section&quot;:&quot;Form&quot;}}">
 class Component extends DCLogic {
-  state = { sent: false };
+  // Paste your Web3Forms access key here (from web3forms.com, free).
+  ACCESS_KEY = 'baed3d10-e4f3-4c2f-acbc-1c521ac95a64';
+  state = { phase: 'idle', msg: '' };
+  onSubmit = async e => {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+    if (data.get('botcheck')) return;
+    data.append('access_key', this.ACCESS_KEY);
+    data.append('subject', 'New inquiry from arenapartners website');
+    data.append('from_name', 'Arena Partners website');
+    this.setState({ phase: 'sending', msg: 'Sending…' });
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { Accept: 'application/json' }, body: data });
+      const json = await res.json();
+      if (json.success) { form.reset(); this.setState({ phase: 'sent', msg: 'Thanks. Your message is on its way, and we’ll be in touch shortly.' }); }
+      else this.setState({ phase: 'error', msg: json.message || 'Something went wrong. Please try again.' });
+    } catch (err) {
+      this.setState({ phase: 'error', msg: 'Couldn’t send. Check your connection, or email us directly.' });
+    }
+  };
   renderVals() {
     const mode = this.props.formArea ?? 'reference';
+    const p = this.state.phase;
     return {
       showSlot: mode === 'embed slot',
       showRef: mode !== 'embed slot',
-      status: this.state.sent ? 'Thanks — preview only, nothing was sent.' : '',
-      onSubmit: e => { e.preventDefault(); this.setState({ sent: true }); }
+      status: this.state.msg,
+      statusColor: p === 'error' ? '#D9714F' : p === 'sent' ? '#EDE9E1' : '#8B9296',
+      sending: p === 'sending',
+      btnLabel: p === 'sending' ? 'Sending…' : 'Send',
+      onSubmit: this.onSubmit
     };
   }
 }
