@@ -27,6 +27,7 @@ Run `npx serve .` and open the printed URL.
 - If you add pages, add them to `sitemap.xml` and `llms.txt`.
 
 ## Notes
+- LeadBoxer tracking is installed in the `<head>` of every page, right after Google Analytics.
 - Any URL that doesn't exist goes to `404.html`, which sends visitors to the home page straight away. Vercel uses `404.html` automatically, so no configuration is needed. The page still returns a 404 status, so search engines won't index broken URLs.
 - Google Analytics (G-WCY68JY0X6) is installed in the `<head>` of every page.
 - Team headshots live in `images/`. Upload that folder too.
